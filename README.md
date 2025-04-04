@@ -1,26 +1,46 @@
 # AI Event Trader
 
 ## Background
-It's well-known that cryptocurrency prices are highly susceptible to influential figures' (such as Vitalik Buterin, Donald Trump) statements on social media platforms. For example, on April 3rd, when Justin Sun suddenly criticized FUSDT, it caused significant de-pegging. However, after the FUSDT team clarified the situation, the price quickly returned to its pegged value. This demonstrates that monitoring key opinion leaders' (KOLs) statements on-chain presents substantial arbitrage opportunities. Unfortunately, a single person cannot constantly monitor every KOL's statements, which often leads to missed opportunities.
+
+Cryptocurrency markets are highly responsive to social media statements from influential figures like Vitalik Buterin or Donald Trump. For instance, on April 3, 2025, when Justin Sun criticized FUSDT, it triggered significant de-pegging. However, once the FUSDT team provided clarification, the price quickly returned to its pegged value. This volatility creates substantial arbitrage opportunities for traders who can quickly react to key opinion leaders' (KOLs) statements.
+
+The challenge is that a single person cannot effectively monitor all relevant KOLs across various platforms, leading to missed trading opportunities.
 
 ## Introduction
-AI Event Trader aims to solve this problem through AI Agents that monitor KOLs' statements and autonomously make decisions to go long or short on specific tokens for arbitrage purposes.
 
-## How It Works
+AI Event Trader is a sophisticated solution that leverages AI agents to monitor influential figures' statements on social media and automatically execute trading decisions on the Polygon blockchain. By combining natural language processing with blockchain technology, the system can identify market-moving statements and execute trades faster than human traders.
+
+## Key Features
+
+- **Real-time KOL Monitoring**: Continuously tracks statements from key opinion leaders on platforms like Farcaster
+- **Sentiment Analysis**: Uses advanced AI to determine if statements are bullish or bearish for specific tokens
+- **Autonomous Trading**: Makes independent decisions to long or short tokens based on analyzed sentiment
+- **Polygon Integration**: Executes all transactions on Polygon PoS for fast, low-cost trading
+- **Risk Management**: Implements safeguards to limit potential losses and optimize capital efficiency
+
+## Technology Stack
 
 ### Polygon MCP
-This project is built on Polygon MCP, using Python scripts to automatically monitor specific Farcaster accounts' messages and determine whether to buy or sell.
 
-### 1inch
-We use 1inch for trading and querying on-chain account status.
+The core of AI Event Trader is built on the Polygon Model Context Protocol (MCP), which provides:
 
-### ENS Subnames
-Different agents under different subnames have varied trading styles.
+- Seamless blockchain interaction for AI agents
+- Reliable on-chain data access
+- Low-cost, high-speed transaction execution
+- Smart contract deployment for automated trading strategies
 
-### Circle
-Quantitative trading users should minimize holding stablecoins and don't need to worry about gas token price fluctuations.
+### 1inch Integration
 
-## Frequently Asked Questions
+The platform leverages 1inch's powerful APIs to:
 
-### Why Trade On-Chain?
-TODO
+- Execute optimal token swaps with minimal slippage
+- Query real-time token prices and account balances
+- Track transaction history for performance analysis
+- Monitor market liquidity to optimize trade timing and size
+
+## Installation
+
+```bash
+git clone https://github.com/your-username/ai-event-trader.git
+cd ai-event-trader
+npm install
