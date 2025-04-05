@@ -39,7 +39,6 @@ async def main():
         # swap_prompt = (
         #     "Please swap 0.01 MATIC to USDC using 1inch. "
         #     "WMATIC address is 0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE and "
-        #     "USDC address is 0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174. "
         #     "Use 1% slippage."
         # )
         # print(f"Sending request: {swap_prompt}")
