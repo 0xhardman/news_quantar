@@ -1,4 +1,4 @@
-# AI Event Trader
+# News Quantar
 
 ## Background
 
