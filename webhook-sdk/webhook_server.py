@@ -85,11 +85,6 @@ def process_event(event_data: Dict[str, Any]):
             text = cast_data.get('text', '')
             
             logger.info(f"新 cast 来自 {display_name} (@{username}): {text}")
-            
-            # 这里可以添加您的业务逻辑，例如检测特定关键词并触发操作
-            if '$(ETH)' in text or '$(eth)' in text or 'ETH' in text or 'eth' in text:
-                logger.info(f"检测到 ETH 相关内容: {text}")
-                # 在这里可以触发交易或其他操作
     except Exception as e:
         logger.error(f"处理事件时出错: {str(e)}")
         logger.error(f"事件数据: {event_data}")
