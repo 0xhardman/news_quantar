@@ -10,5 +10,3 @@ mcp:
       command: "node" # Start command
       args: ["./polygon-mcp/build/index.js"] # Command arguments
       # don't forget config SEED_PHRASE in polygon-mcp/.env
-      env:
-        ONE_INCH_API_KEY: ${ONE_INCH_API_KEY} # Pass 1inch API key to MCP server
