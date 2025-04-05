@@ -68,13 +68,31 @@ def process_event(event_data: Dict[str, Any]):
     """
     # 示例：提取 cast 内容并打印
     try:
-        if event_data.get('type') == 'cast.created':
-            cast = event_data.get('cast', {})
-            author = cast.get('author', {})
-            text = cast.get('text', '')
-            logger.info(f"New cast from {author.get('username')}: {text}")
+        # 检查事件类型
+        event_type = event_data.get('type')
+        logger.info(f"处理事件类型: {event_type}")
+        
+        if event_type == 'cast.created':
+            # 从 data 字段获取 cast 数据
+            cast_data = event_data.get('data', {})
+            
+            # 获取作者信息
+            author = cast_data.get('author', {})
+            username = author.get('username', 'unknown')
+            display_name = author.get('display_name', 'unknown')
+            
+            # 获取 cast 文本
+            text = cast_data.get('text', '')
+            
+            logger.info(f"新 cast 来自 {display_name} (@{username}): {text}")
+            
+            # 这里可以添加您的业务逻辑，例如检测特定关键词并触发操作
+            if '$(ETH)' in text or '$(eth)' in text or 'ETH' in text or 'eth' in text:
+                logger.info(f"检测到 ETH 相关内容: {text}")
+                # 在这里可以触发交易或其他操作
     except Exception as e:
-        logger.error(f"Error processing event: {str(e)}")
+        logger.error(f"处理事件时出错: {str(e)}")
+        logger.error(f"事件数据: {event_data}")
 
 
 if __name__ == "__main__":
