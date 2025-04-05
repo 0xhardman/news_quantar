@@ -38,6 +38,13 @@ The platform leverages 1inch's powerful APIs to:
 - Track transaction history for performance analysis
 - Monitor market liquidity to optimize trade timing and size
 
+### Farcaster Integration
+
+The platform utilizes NEYNAR webhooks for immediate market response:
+
+- Real-time Webhook Monitoring: Leverages NEYNAR webhooks to listen for cast creation events from key Farcaster users
+- Instant Trade Execution: Triggers buy/sell decisions within milliseconds of detecting relevant casts
+
 ## Installation
 
 ```bash
