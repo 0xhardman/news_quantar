@@ -1,0 +1,12 @@
+# Fast-Agent Configuration File
+model:
+  default: claude-3-7-sonnet-20250219 # Default model: Claude 3.7 Sonnet
+  provider: anthropic # Using Anthropic as the provider
+  api_key: ${ANTHROPIC_API_KEY} # Get API key from environment variable
+
+mcp:
+  servers:
+    polygon: # Polygon MCP server configuration
+      command: "node" # Start command
+      args: ["./polygon-mcp/build/index.js"] # Command arguments
+      # don't forget config SEED_PHRASE in polygon-mcp/.env

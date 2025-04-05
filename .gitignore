@@ -1,1 +1,7 @@
 .env
+fastagent.secrets.yaml
+*.log
+__pycache__/
+*.py[cod]
+*$py.class
+fastagent.jsonl
