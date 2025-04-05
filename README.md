@@ -45,6 +45,51 @@ The platform utilizes NEYNAR webhooks for immediate market response:
 - Real-time Webhook Monitoring: Leverages NEYNAR webhooks to listen for cast creation events from key Farcaster users
 - Instant Trade Execution: Triggers buy/sell decisions within milliseconds of detecting relevant casts
 
+## Core Components
+
+### polygon-mcp
+
+A TypeScript implementation of the Polygon Model Context Protocol that enables:
+
+- Direct blockchain interaction from AI agents
+- Token balance checking and transfers
+- Smart contract deployment and interaction
+- Gas price optimization
+- **1inch swap** integration for efficient token exchanges
+- Secure wallet management through seed phrases
+
+### webhook-sdk
+
+A Python SDK for Farcaster event monitoring that provides:
+
+- Creation and management of Neynar webhooks
+- Real-time event reception for Farcaster casts
+- Filtering capabilities to focus on specific content or users
+- Event deduplication to prevent duplicate trade execution
+- Seamless integration with the trading engine
+
+### chat.py
+
+A standalone interactive CLI for blockchain operations that:
+
+- Provides a conversational interface to the Polygon blockchain
+- Allows manual querying of wallet addresses, gas prices, and token balances
+- Supports manual token swaps and transfers for testing
+- Serves as a development and debugging tool for the trading system
+- Uses the Fast-Agent framework for natural language blockchain interaction
+
+### quantar.py
+
+The core trading engine that:
+
+- Connects the webhook system to the trading infrastructure
+- Analyzes Farcaster messages for trading signals
+- Implements strict trading limits and security measures
+- Executes trades through the Polygon MCP
+- Supports multiple token types with proper decimal handling
+- Restricts trading to authorized users only
+- Ensures proper token address usage (e.g., native USDC vs USDC.e)
+
 ## Installation
 
 ```bash
